@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/chart/chart",
+    "pages/my/my",
+    "pages/charge/charge",
+    "pages/detail/detail",
+    "pages/myuser/myuser"
+  ],
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#f4ea2a",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./icon/home.png",
+        "selectedIconPath": "./icon/home_active.png"
+      },
+      {
+        "pagePath": "pages/charge/charge",
+        "text": "记账",
+        "iconPath": "./icon/charge.png",
+        "selectedIconPath": "./icon/charge_active.png"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "text": "图表",
+        "iconPath": "./icon/chart.png",
+        "selectedIconPath": "./icon/chart_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./icon/my.png",
+        "selectedIconPath": "./icon/my_active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 小杜查",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,20 @@
+<view class="list">
+
+	<view class="list-item clearfix" wx:for="{{bookingData}}" wx:key="index">
+		<view class="fl list-icon">
+			<image src="{{item.type.url}}" mode="widthFix"></image>
+		</view>
+		<view class="fl list-content">
+			<view class="fl left-content">
+				<view class="clearfix">
+					<view class="fl type">{{item.type.title}}</view>
+					<view class="fl">{{item.text.title}}</view>
+          <view class="fl time">{{item.userInfo.date}}</view>
+				</view>
+				<view class="comment">{{item.userInfo.comment}}</view>
+			</view>
+			<view class="fr money-t {{item.costType.type}}">￥{{item.userInfo.price}}</view>
+		</view>
+	</view>
+
+</view>

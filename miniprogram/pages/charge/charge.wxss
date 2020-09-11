@@ -1,0 +1,165 @@
+/* miniprogram/pages/charge/charge.wxss */
+.charge{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left:0;
+  bottom: 0;
+  background-color: #ccc;
+  padding-bottom: 30rpx;
+  overflow-y: auto;
+}
+.charge_bg{
+  height: 200rpx;
+  background-color: aquamarine;
+}
+.charge_box{
+  width:calc(100% - 40rpx);
+  margin: 20rpx;
+  min-height: 200rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 0;
+  background-color: white;
+}
+.charge_title{
+  width: 270rpx;
+  height: 80rpx;
+  margin: 30rpx auto;
+  border-radius: 60rpx;
+  border: 1rpx solid #ccc;
+  overflow: hidden;
+}
+.title_left{
+  padding-left: 20rpx;
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 80rpx;
+  border-right: 1rpx solid #ccc;
+}
+.title_right{
+  padding-right: 20rpx;
+  box-sizing: border-box;
+  width: calc(50% - 1rpx);
+  line-height: 80rpx;
+  text-align: center;
+}
+.charge_title .active{
+  background-color: turquoise;
+}
+.charge_list{
+  width: 20%;
+  margin-bottom: 20rpx;
+}
+.charge_list_box{
+  width: 80rpx;
+  margin:0 auto;
+}
+.charge_image{
+  width: 100%;
+  height: 80rpx;
+  padding-top: 10rpx;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+}
+.images{
+  width: 80%;
+  margin: auto;
+  transition: transform .5s linear;
+}
+.charge_list_box .active{
+  transform: scale(1.1);
+  color: red;
+}
+.charge_text{
+  width: 100%;
+  margin: 10rpx 0;
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 34rpx;
+}
+.method{
+  width: calc(100% - 40rpx);
+  min-height: 150rpx;
+  margin: 0 20rpx;
+  border-radius: 20rpx;
+  margin-top: 400rpx;
+  background-color: #fff;
+}
+.method_view{
+  width: calc(100% - 40rpx);
+  margin: 0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+.method_box{
+  width: calc(100% - 40rpx);
+  margin: 0 20rpx;
+}
+.method_text{
+  width: calc(20% - 20rpx);
+  box-sizing: border-box;
+  height: 60rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid #ccc;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: #ccc;
+  margin: 20rpx 10rpx;
+  height: 60rpx;
+}
+.method_text_active{
+  background-color: aquamarine;
+}
+.note{
+  width: calc(100% - 40rpx);
+  margin: 0 20rpx;
+  padding: 5rpx 0;
+  /* min-height: 300rpx; */
+  background-color: #fff;
+  margin-top: 40rpx;
+  border-radius: 30rpx;
+}
+.note_top{
+  width: calc(100% - 40rpx);
+  height: 80rpx;
+  margin: 0 20rpx;
+  background-color: blue;
+}
+.note_box{
+  height: 80rpx;
+  width: 100%;
+  margin: 20rpx 0;
+}
+.note_text{
+  width: 100rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+  line-height: 80rpx;
+}
+.note_date{
+  margin-left: 20rpx;
+  width: calc(100% - 180rpx);
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.note_inp{
+  width: calc(100% - 180rpx);
+  height: 75rpx;
+  margin-left: 20rpx;
+  line-height: 75rpx;
+  border-bottom: 1rpx solid #ccc;
+  background-color: #fff;
+}
+.btn button{
+  margin: 0 20rpx;
+  width: calc(100% - 40rpx);
+  background-color: #7FFFD4;
+  border-radius: 20rpx;
+  margin-top: 40rpx;
+}

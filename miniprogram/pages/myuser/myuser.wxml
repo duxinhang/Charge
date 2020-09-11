@@ -1,0 +1,29 @@
+<view class="list">
+
+	<view class="list-item clearfix" wx:for="{{bookingData}}" wx:key='index'>
+		<view class="fl list-icon">
+			<image class="auto-img list-icon-img" src="{{item.type.url}}" mode="widthFix"></image>
+		</view>
+		<view class="fl list-content">
+			<view class="fl left-content">
+				<view class="clearfix">
+					<view class="fl type">{{item.text.title}}</view>
+					<view class="fl">{{item.type.title}}</view>
+          <view class="fl time">{{item.userInfo.date}}</view>
+				</view>
+				<view class="comment">{{item.userInfo.comment}}</view>
+			</view>
+			<view class="fr money-t">
+        <view class="fl {{item.account.type == 'shouru' ? 'shouru' : 'zhichu'}}">
+			 		<text wx:if="{{item.account.type == 'shouru'}}">+</text>
+			 		<text wx:else>-</text>
+					￥{{item.userInfo.price}}
+				</view>
+        <!-- <view class="fl delete" bindtap="removedata" data-list="{{item}}">
+          <image class="auto-img delete-img" src="../../icon/remove.png" mode="widthFix"></image>
+        </view> -->
+      </view>
+		</view>
+	</view>
+
+</view>

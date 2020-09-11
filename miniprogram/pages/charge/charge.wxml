@@ -1,0 +1,60 @@
+<!--miniprogram/pages/charge/charge.wxml-->
+<view class="charge clearfix">
+  <view class="charge_bg"></view>
+  <view class="charge_box clearfix">
+
+    <view class="charge_title clearfix">
+      <view class="{{item.isActive == true ? 'active' : ''}} fl {{item.type == 'shouru' ? 'title_left' : 'title_right'}}" wx:key="index" wx:for="{{list}}" data-index="{{index}}" data-active="{{item.isActive}}" data-key="list" bindtap="addios">{{item.title}}</view>
+    </view>
+
+    <view class="fl charge_list" wx:for="{{icons}}" wx:key="index">
+      <view class="charge_list_box" data-index="{{index}}" data-active="{{item.isActive}}" data-key="icons" bindtap="addios">
+        <view class="charge_image {{item.isActive ? 'active' : ''}}">
+          <view class="images">
+            <image class=" {{item.isActive ? 'active' : ''}}" mode="widthFix" src="{{item.url}}"></image>
+          </view>
+        </view>
+        <view class="charge_text {{item.isActive ? 'active' : ''}}">{{item.title}}</view>
+      </view>
+    </view>
+
+  </view>
+  <view class="method">
+    <view class="method_view">账户选择</view>
+    <view class="method_box clearfix">
+      <view class="fl method_text {{item.isActive ? 'method_text_active' : ''}}" wx:for="{{account}}" wx:key="index" data-index="{{index}}" data-active="{{item.isActive}}" data-key="account" bindtap="addios">{{item.title}}</view>
+    </view>
+  </view>
+
+  <view class="note">
+    <!-- <view class="note_top">
+
+    </view> -->
+    <view class="note_box">
+      <view class="note_text fl">日期:</view>
+      <view class="fl note_date">
+        <picker bindchange="userInfo" data-key="date" mode="date" start="2019-09-01" end="{{times}}">
+            {{userInfo.date}}
+        </picker>
+      </view>
+    </view>
+    <view class="note_box">
+      <view class="note_text fl">
+        金额:
+      </view>
+      <input value="{{userInfo.price=='' ? '' : userInfo.price}}" class="fl note_inp" data-key="price" bindchange="userInfo" placeholder="输入金额"></input>
+    </view>
+     <view class="note_box">
+      <view class="note_text fl">
+        备注:
+      </view>
+      <input value="{{userInfo.comment=='' ? '' : userInfo.comment}}" class="fl note_inp" data-key="comment" bindchange="userInfo" placeholder="输入备注" maxlength="20"></input>
+    </view>
+  </view>
+
+  <view class="btn">
+    <button bindtap="addlist">保存</button>
+  </view>
+
+
+</view>

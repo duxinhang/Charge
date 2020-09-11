@@ -1,0 +1,54 @@
+<!--miniprogram/pages/home/home.wxml-->
+<!-- <text>miniprogram/pages/home/home.wxml</text> -->
+<view class="home">
+  <view class="home_box">
+    <view class="home_text">本月结余</view>
+    <view class="home_price">{{userData}}</view>
+  </view>
+  <view class="home_btn clearfix">
+    <view class="home_tab fl">
+      <view class="home_tab_L fl">本月收入</view>
+      <view class="home_tab_R fr">{{userInfo.add}}</view>
+    </view>
+    <view class="home_tab fr">
+      <view class="home_tab_L fl">本月支出</view>
+      <view class="home_tab_R fr">{{userInfo.end}}</view></view>
+  </view>
+</view>
+
+<view class="date clearfix">
+  <view class="fl date_text">{{currentDate}}</view>
+  <view class="fl clearfix date_bar">
+    <view class="fl shour">收入:{{priceList.add}}</view>
+    <view class="fl zhicu">支出:{{priceList.end}}</view>
+  </view>
+  <view class="date_dir clearfix fr">
+    <picker mode="date" bindchange="selectDate" start="{{dateRange.start}}" end="{{dateRange.end}}">
+      <view>
+        <view class="date_dir_text fl">.</view>
+        <view class="date_dir_text fl">.</view>
+        <view class="date_dir_text fl">.</view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class="lists">
+
+  <view class="lists_box clearfix" wx:for="{{userList}}" wx:key='index'>
+    <view class="lists_img fl">
+      <image mode="widthFix" src="{{item.type.url}}"></image>
+    </view>
+    <view class="lists_text clearfix fl">
+      <view class="lists_text_L fl">
+        <view class="lists_text_top">{{item.type.title}}</view>
+        <view class="lists_text_btn">{{item.userInfo.comment}}</view>
+      </view>
+      <view class="lists_text_R fr">
+        <text>{{item.account.type == 'shouru' ? '+' : '-'}}</text>
+        {{item.userInfo.price}}
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,106 @@
+/* miniprogram/pages/home/home.wxss */
+.home{
+  width: 100%;
+  height: 300rpx;
+  background-color: aquamarine;
+}
+.home_box{
+  padding: 40rpx 60rpx;
+}
+.home_text{
+  font-size: 36rpx;
+}
+.home_price{
+  font-size: 60rpx;
+}
+.home_btn{
+  width: 100%;
+}
+.home_tab{
+  width: 50%;
+  height: 40rpx;
+  line-height: 40rpx;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 1rpx solid #ccc;
+}
+.home_tab_L{
+  font-size: 30rpx;
+  margin-left: 40rpx;
+}
+.home_tab_R{
+  padding-right: 40rpx;
+}
+.date{
+  width:100%;
+  background-color: #ddd;
+}
+.date_text{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+}
+.date_bar{
+  /* width: calc(100% - 300rpx); */
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+  font-size: 34rpx;
+}
+.shour{
+  margin-right: 20rpx;
+}
+.date_dir{
+  margin-right: 20rpx;
+  height: 80rpx;
+  /* line-height: 80rpx; */
+}
+.date_dir_text{
+  padding: 0 10rpx;
+  margin-top: -20rpx;
+  font-size: 60rpx;
+}
+.lists{
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 20rpx;
+}
+.lists_box{
+  height: 140rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.lists_img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 20rpx 20rpx;
+}
+.lists_text{
+  width: calc(100% - 140rpx);
+  height: 140rpx;
+}
+.lists_text_L{
+  width: 70%;
+  height: 140rpx;
+}
+.lists_text_top{
+  height: 70rpx;
+  line-height: 70rpx;
+  text-indent: 20rpx;
+  width: 100%;
+}
+.lists_text_btn{
+  text-indent: 20rpx;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lists_text_R{
+  width: 30%;
+  height: 140rpx;
+  line-height: 140rpx;
+  text-align: center;
+}

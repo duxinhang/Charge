@@ -1,0 +1,50 @@
+<!--miniprogram/pages/chart/chart.wxml-->
+<view class="dateage clearfix">
+  <view class="fl datesge_left">
+<!-- <picker class="picker-box" mode="date" start="{{date.start}}" end="{{date.end}}" bindchange="selectDate">{{currentDate}}</picker> -->
+     <picker bindchange="selectDate" class="datesge_left_date" mode="date" start="2019-09-01" end="{{date.end}}">
+        {{currentDate}}
+    </picker>
+  </view>
+  <view class="fr datesge_right" bindtap="addtype">
+    按{{datetype.title[datetype.list]}}查询
+  </view>
+</view>
+
+<view class="chaxun clearfix">
+
+  <view class="fl chaxun_box" wx:for="{{pricetext}}" wx:key="index" data-index="{{index}}" data-active="{{item.isActive}}" bindtap="toggleTitle">
+    <view class="chaxun_tab {{item.isActive ? 'active' : ''}}">
+      <view class="chaxun_title">{{datetype.title[datetype.list]}}{{item.title}}</view>
+      <view class="chaxun_price">￥{{item.price}}</view>
+    </view>
+  </view>
+
+</view>
+
+<view class="tubiao" >
+  <canvas  hidden="{{!isHas}}" style="width: {{canvasWidth + 'px'}};" class="canvas" canvas-id="pieCanvas"></canvas>
+</view>
+
+<view class="list clearfix" wx:for="{{pricetext[0].isActive ? shourulist : zhichulist}}" wx:key="index">
+  <view class="fl list_img">
+    <view class="list_img_box">
+      <image src="{{item.url}}" mode="widthFix"></image>
+    </view>
+  </view>
+  <view class="fl list_box">
+    <view class="list_top">
+      <view class="list_top_text fl">{{item.title}}</view>
+      <view class="list_top_right fr">￥{{item.total}}</view>
+    </view>
+    <view class="list_btn clearfix">
+      <view class="list_btn_left fl">
+        <view class="active-progress" style="width: {{item.percent}};background-color: {{item.color}};min-width:10rpx"></view>
+      </view>
+      <view class="list_btn_right fr">{{item.count}}笔</view>
+    </view>
+  </view>
+  <view class="fr list_right">
+    <view bindtap="tiaoz" data-item="{{item}}" class="list_right_icon">></view>
+  </view>
+</view>
